@@ -89,6 +89,7 @@ h6 {
 /* ШАПКА */
 body{
   font-family: 'Open Sans', sans-serif;
+
 }
 
 .header{
@@ -196,8 +197,8 @@ body{
 
 }
 .fone{
-  display:absolute;
+  position:absolute;
   width:360px;
   margin-left:375px;
-  margin-bottom:100px;
+  top:267px;
 }
