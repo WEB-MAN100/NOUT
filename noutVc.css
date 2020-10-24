@@ -91,19 +91,196 @@ body{
   font-family: 'Open Sans', sans-serif;
 
 }
+/* BURGER */
+.header__menu{
+  position:absolute;
+  background-color:#FFF;
+  width:290px;
+  height:505px;
+  box-shadow: 16px 0px 52px 
+  rgba(14, 24, 80, 0.2);
 
-.header{
-  display:flex;
-  width:768px;
-  height:88px;
-  background-color:#f8f8f8;
-  border-bottom:solid 2px #D9FFF5;
 }
+.header:before{
+  content:'';
+  position:absolute;
+  z-index:2;
+}
+.header__burger{
+  position: relative;
+  width:40px;
+  height:40px;
+  top:65px;
+  left:13px;
+  position: relative;
+  border-radius:40%;
+  z-index:3;
+  background-color:#FF3E79;
+  border-radius:40%
+
+}
+.header__burger span{
+  position:absolute;
+  background-color:#fff;
+  position:absolute;
+  left:5px;
+  width:70%;
+  border-radius:40%;
+  height:2px;
+  top:19px;
+  transition:all 0.5s ease 0s; 
+}
+.header__burger:before,
+.header__burger:after{
+  content:'';
+  background-color:#fff;
+  position: absolute;
+  border-radius:40%;
+  width:69%;
+  height:2px;
+  left:5px;
+  transition:all 0.5s ease 0s;
+}
+.header__burger:before{
+  top:8px;
+}
+.header__burger:after{
+  bottom:8px;
+}
+.header__burger.active span{
+  transform:scale(0);
+}
+.header__burger.active:before{
+  transform:rotate(45deg);
+  top:20px;
+}
+.header__burger.active:after{
+  transform:rotate(-45deg);
+  bottom:18px;
+}
+.header__menu{
+  left:-100%;
+  transition:all 0.5s ease 0s;
+}
+.header__menu.active{
+  left:0;
+  transition:all 0.5s ease 0s;
+}
+
+/* CONTENT */
+.cpsgroup{
+  display:flex;
+  width:230px;
+  height:51px;
+  padding-top:36px;
+  margin-left:65px;
+  align-items:center;
+  justify-content:space-around;
+
+}
+/* КНОПКИ */
+.nav__buttons{
+  display:flex;
+  width:270px;
+  height:350px;
+  margin-top:60px;
+  flex-direction:column;
+}
+
+.header__button{
+  display:flex;
+  height:70px;
+  background-color:#fff;
+  color: #1B1C21;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left:30px;
+  align-items:center;
+  justify-content:flex-start;
+}
+.highlight{
+  position:absolute;
+  width:4px;
+  margin-top:18px;
+}
+#header__button1{
+  color:#7E7E82;
+}
+/* FOOTER */
+.end{
+  display:none;
+  width:196px;
+  height:198px;
+  margin-left:29px;
+  margin-top:230px;
+}
+.end__nav{
+  display:flex;
+  width:162px;
+  height:40px;
+  justify-content:space-between;
+}
+/* MAILS */
+.mails{
+  display:flex;
+  height:68px;
+  margin-top:10px;
+  flex-direction:column;
+}
+.mail{
+  width:106px;
+  height:24px;
+  color: #1B1C21;
+  font-size: 16px;
+  line-height: 24px;
+}
+.nomer{
+  width:196px;
+  height:32px;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top:5px;
+  color: #1B1C21;
+  font-weight: 600;
+}
+/* languages */
+.languages{
+  display:flex;
+  width:85px;
+  height:24px;
+  justify-content:space-between;
+}
+.RU{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #7E7E82;
+
+}
+.EN{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1B1C21;
+
+}
+.CH{
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #1B1C21;
+
+}
+/* КОНЕЦ БУРГЕРА */
+
 
 .header__in{
   display:flex;
   align-items:center;
   width:768px;
+  height:88px;
+  background-color:#f8f8f8;
+  border-bottom:solid 2px #D9FFF5;
 }
 /* MENU */
 .header__nav1{
@@ -111,8 +288,8 @@ body{
   width:176px;
   height:88px;
   align-items:center;
-  justify-content:space-between;
-  margin-left:24px;
+  justify-content:space-around;
+  margin-left:50px;
 
 }
 
@@ -191,7 +368,6 @@ body{
 .tdalee{
   font-size: 16px;
   line-height: 24px;
-  text-align: left;
   margin-left:13px;
 
 
@@ -200,5 +376,5 @@ body{
   position:absolute;
   width:360px;
   margin-left:375px;
-  top:267px;
+  top:305px;
 }
